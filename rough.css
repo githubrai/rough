@@ -1,18 +1,25 @@
-
 main {
     background-color: gray;
 }
-.button {
+.button-1 {
+    overflow: hidden;
+    transition: 0.3s;
     width: 100%;
-    height: 30px;
-    color: white;
-    background-color: red;
-    transition: ease-out 0.3s;
-    outline: none;
-    box-shadow: inset 0 0 0 0 green;
-    border: none;
+    background: yellow;
+    height: 20px;
+    position: relative;
 }
-.button:hover{
-    box-shadow: inset 0 0 0 yellow;
-    cursor: pointer;
+.button-1:after{
+   width: 0;
+   position: absolute;
+   background: red;
+   left: 100%;
+    pointer: cursor;
+    height: 20px;
+    content: '';
+    transition: 0.3s;
+}
+.button-1:hover:after {
+    left:70%;
+    width: 100%;
 }
